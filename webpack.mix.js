@@ -10,5 +10,4 @@ mix.js('resources/assets/js/app.js', 'public/js')
     'axios'
 ]);
 
-mix.sass('resources/assets/sass/vendor.scss', 'public/css');
 mix.sass('resources/assets/sass/app.scss', 'public/css');
