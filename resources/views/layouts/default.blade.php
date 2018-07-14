@@ -10,7 +10,7 @@
     <title>SMH</title>
 
     {{-- CSS --}}
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </head>
 <body>
@@ -20,9 +20,9 @@
     @include('partials.footer')
 
     {{-- JS --}}
-    <script src="{{ mix('js/manifest.js') }}"></script>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ asset('js/manifest.js') }}"></script>
+    <script src="{{ asset('js/vendor.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
 </body>
 </html>
