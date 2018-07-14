@@ -18,7 +18,7 @@
 
             <div class="carousel-inner">
                 @foreach($pageData['banner']['slides'] as $slide)
-                    <div class="carousel-item {{ $slide['slideStatusClass'] }}" style="background-image: url('../images/banner/{{$slide['image']}}');" >
+                    <div class="carousel-item {{ $slide['slideStatusClass'] }}" style="background-image: url(' {{asset( 'images/'.$slide['image'] )}} ');" >
                         <div class="banner-slogans-wrap">
                             @foreach($slide['slogans'] as $slogan)
                                 <h1 class="banner-slogan"> {{$slogan}} </h1> 
@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-sm-5">
                             <div class="image">
-                                <img src="../images/misc/village-man-work-01.png" alt="">
+                                <img src="{{ asset('images/' . $section["image"]) }}" alt="">
                             </div>
                         </div>
                     </div>
@@ -185,9 +185,7 @@
                         @foreach($section['blocks'] as $card)
                             <div class="col-sm-6 col-md-4 col-lg-3">
                                 <div class="mcard">
-                                    <div class="mcard-avatar">  
-                                        <img src="{{ asset('images/team') }}/{{ $card['avatar'] }}" width="100%">
-                                    </div>
+                                    <div class="mcard-avatar" style="background-image:url('{{ asset( 'images/'.$card['image'] ) }}')"> </div>
                                     <div class="mcard-badge avatar-desig"> {{ $card['role'] }} </div>
                                     <div class="mcard-title avatar-name"> {{ $card['name'] }} </div>
                                 </div>
