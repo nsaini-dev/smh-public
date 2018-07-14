@@ -1,8 +1,6 @@
 let mix = require('laravel-mix');
 
-
-mix.js('resources/assets/js/app.js', 'public/js')
-.extract([
+mix.js('resources/assets/js/app.js', 'public/js').extract([
     'lodash',
     'popper.js',
     'jquery',
@@ -10,4 +8,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
     'axios'
 ]);
 
-mix.sass('resources/assets/sass/app.scss', 'public/css');
+mix.sass('resources/assets/sass/app.scss', 'public/css').options({
+    processCssUrls: false
+});
