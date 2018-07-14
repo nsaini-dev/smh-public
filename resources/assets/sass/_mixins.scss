@@ -1,0 +1,37 @@
+
+@mixin mix-mq-font-size($list...) 
+{
+    font-size: nth($list, 1) * 1px;
+
+    @include media-breakpoint-up(sm) {
+        font-size: nth($list, 2) * 1px;
+    }
+    @include media-breakpoint-up(md) {
+        font-size: nth($list, 3) * 1px;
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: nth($list, 4) * 1px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: nth($list, 5) * 1px;
+    }
+}
+
+@mixin mix-font-styling($family: false, $weight: false, $size: false, $height: false, $color: false) 
+{
+    @if $family {
+        font-family: $family, sans-serif;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+    @if $size {
+        font-size: $size * 1px;
+    }
+    @if $color {
+        color: $color;
+    }
+    @if $height {
+        line-height: $lheight * 1em;
+    }
+}

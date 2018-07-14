@@ -1,0 +1,197 @@
+.home01
+{
+    // INITIALIZATION
+
+    $bannerHeight: 450px;
+
+    $colors: (
+        'primary' : #66B2B2,
+        'banner-heading' : darken(#66B2B2, 5%),
+        'default-heading' : #222,
+        'default-title' : #222,
+    );
+
+    $map-font-styling: (
+        'banner-heading'    : ('Arimo', 700, 20, false, map-get($colors,'banner-heading')),
+        'section-heading'   : ('Lato', 700, 20, false, map-get($colors,'default-heading')),
+        'section-title'     : ('Lato', 700, 20, false, map-get($colors,'default-title')),
+        'section-title-md'  : ('Lato', 700, 20, false, map-get($colors,'default-title')),
+    );
+
+    @function func-font-styling($item) {
+        @if $item == 'banner-heading' {
+            @return ('Arimo', bold, 20, map-get($colors,'banner-heading'))
+        }
+    }
+
+
+    // DEFAULT
+
+    section 
+    {
+        &.default {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            &:nth-child(odd) {
+                background-color: #fff;
+            }
+            &:nth-child(even) {
+                background-color: #eee;
+            }
+        }
+        
+        .banner-slogan {
+            @include mix-font-styling(map-get($map-font-styling,'banner-heading')...);
+            @include mix-mq-font-size(20, 28, 28, 36, 36);
+        }
+
+        .section-heading {
+            @include mix-font-styling(map-get($map-font-styling,'section-heading')...);
+            @include mix-mq-font-size(28, 28, 32, 36, 36);
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .mcard-title {
+            @include mix-font-styling(map-get($map-font-styling,'section-title')...);
+            @include mix-mq-font-size(18, 18, 20, 22, 22);
+            margin-bottom: 5px;
+        }
+
+        .mcard {
+            margin-top: 30px;
+        }
+
+        .mcard-badge {
+            background-color: map-get($map: $colors, $key: 'primary');
+            color: #fff;
+            font-size: 10px;
+            text-transform: uppercase;
+            padding: 5px 5px;
+        }
+
+        .font-icon i {
+            color: map-get($map: $colors, $key: 'primary');
+            font-size: 60px;
+        }
+    }
+
+    // BANNER
+
+    .section.banner 
+    {
+        position: relative;
+        height: $bannerHeight;
+        background: #999;
+
+        .carousel {
+            height: $bannerHeight;
+        }
+
+        .carousel-item {
+            height: $bannerHeight;
+            background-size: cover;
+        }
+
+        .banner-slogans-wrap {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 40%;
+            margin: 0 5%; 
+            text-align: center;
+
+            @include media-breakpoint-up(lg) {
+                left: auto;
+                text-align: right;
+            }
+        }
+
+        .banner-slogan {
+            display: inline-block;
+            padding: 3px 10px;
+            text-align: center;
+            background-color: rgba($color: #fff, $alpha: 0.9);
+            margin-bottom: 0;
+        }
+
+        .banner-slogan-divider {
+            height: 5px;
+        } 
+
+        
+    }
+
+    // WHAT WE DO
+
+    .section.what-we-do 
+    {
+        
+    }
+
+    // OUR OBJECTIVE
+
+    .section.our-objective {
+        text-align: center;
+
+        img {
+            max-width: 300px;
+        }
+
+        @include media-breakpoint-up(sm) {
+            text-align: left;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    // GET INVOLVED
+
+    .section.get-involved 
+    { 
+        .font-icon {
+            i {
+                font-size: 80px;
+            }
+        }
+
+        
+        @include media-breakpoint-up(md) {
+            .mcard-info {
+                text-align: left;
+            } 
+        }
+        
+    }
+
+    // MEET THE TEAM
+    .section.meet-the-team {
+        .mcard-avatar {
+            height: 200px;
+            background-color: #ccc;
+            background-position: center;
+            background-size: cover;
+        }
+        .avatar-name {
+            @include mix-mq-font-size(18, 18, 14, 18, 18);
+        }
+        .avatar-desig {
+            @include mix-mq-font-size(14, 14, 12, 14, 14);
+        } 
+
+        .mcard {
+            max-width: 240px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include media-breakpoint-up(sm) {
+                max-width: 100%;
+            }
+        }
+             
+    }
+
+
+}

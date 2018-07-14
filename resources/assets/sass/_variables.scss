@@ -1,15 +1,17 @@
 
-/*
- *************************************************************************
- * BOOTSTRAP OVERWRITE 
- *************************************************************************
- */
+// DEFAULTS
+
+$default-font: "Open Sans", sans-serif;
+
+//-----------------------------------------------------------
+// BOOTSTRAP OVERWRITE
+//-----------------------------------------------------------
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: #fff;
 
 // Typography
-$font-family-sans-serif: "Raleway", sans-serif;
+$font-family-sans-serif: $default-font;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 

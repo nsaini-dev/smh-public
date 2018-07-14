@@ -1,9 +1,22 @@
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// FONTS
+@import 'fonts';
 
-// Variables
+// VARIABLES
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// MIXINS
+@import 'mixins';
+
+// BOOTSTRAP
+@import '~bootstrap/scss/bootstrap'; 
+
+//-----------------------------------------------------------
+// APP SPECIFIC
+//-----------------------------------------------------------
+
+@import 'main';
+@import 'header';
+@import 'footer';
+
+@import 'home01';
