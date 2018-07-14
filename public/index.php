@@ -1,11 +1,11 @@
 <?php
 
-
+$CURRENT_DIR = basename(__DIR__) . '/';
 $PROJECT_DIR = __DIR__.'/../';
 
 if($_SERVER['SERVER_NAME'] == 'savemyhomeland.org') 
 {
-    $PROJECT_DIR = __DIR__.'/../../projects/smh-public/';
+    $PROJECT_DIR = __DIR__ .'/../../projects/smh-'. $CURRENT_DIR;
 }
 
 /**
