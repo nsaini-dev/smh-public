@@ -89,18 +89,52 @@
             @endforeach
         </div>
     </section>
+    
+    {{----------------------------------------------------------------------}}
+    {{-- OUR PROJECTS --}}
+    {{----------------------------------------------------------------------}}
+
+    <section class="section default our_projects">
+        <div class="container">
+            @foreach($pageData['our_projects'] as $section)
+            
+            {{-- START --}}
+
+                <div class="section-header">
+                    <h1 class="section-heading">{{ $section['heading'] }}</h1>
+                </div>
+
+                <div class="section-body">
+                    <div class="row">
+                        <div class="col">
+                            <p>{{ $section['description'] }}</p>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="image">
+                                <img src="{{ asset('images/' . $section["image"]) }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            {{-- END --}}
+
+            @endforeach
+        </div>
+    </section>
 
     {{----------------------------------------------------------------------}}
     {{-- WHAT WE DO --}}
     {{----------------------------------------------------------------------}}
 
-    <section class="section default what-we-do text-center">
+    <section class="section default what-we-do">
         <div class="container">
             @foreach($pageData['what_we_do'] as $section) 
 
             {{-- START --}}
 
-                <div class="section-header">
+                <div class="section-header text-left">
                     <h1 class="section-heading">{{ $section['heading'] }}</h1>
                 </div>
 
@@ -151,7 +185,7 @@
                                 </div>
                                 <div class="col">
                                 <div class="mcard-info">
-                                    <div class="mcard-title"> {{ $card['title'] }} </div>
+                                    <div class="mcard-title text-center"> {{ $card['title'] }} </div>
                                     <div class="mcard-description"> {{ $card['description'] }} </div>
                                 </div>
                                 </div>

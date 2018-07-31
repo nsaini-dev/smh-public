@@ -9569,10 +9569,18 @@ footer {
 .home01 section .mcard-title {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 20px;
   color: #222;
   font-size: 18px;
   margin-bottom: 5px;
+}
+
+.home01 section .mcard-description {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #222;
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align:left !important;
 }
 
 @media (min-width: 576px) {
@@ -9614,6 +9622,7 @@ footer {
 .home01 section .font-icon i {
   color: #66B2B2;
   font-size: 60px;
+  text-align:center;
 }
 
 .home01 .section.banner {
